@@ -38,9 +38,17 @@ class App extends Component {
   }
 
   render() {
+   let list = this.cityList.filter((pair)=>{
+      return(pair[name]==="Goa"||pair[name]==="Amsterdam"||pair[name]==="New York"||pair[name]==="Darjeeling"||pair[name]==='Tokyo'||pair[name]==='Lonavala')
     return (
       <div id="main">
-        {/* Do not remove the main div */}
+      <ol>
+        {list.map((pair,i)=>{
+      return <li key={location+(i+1)}>{pair[name]}</li>
+      
+      }
+      )}
+      </ol>
       </div>
     )
   }
