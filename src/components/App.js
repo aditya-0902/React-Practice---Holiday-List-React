@@ -23,7 +23,7 @@ class App extends Component {
       <div id="main">
       <ol>
         {list.map((pair,i)=>{
-      return <li key={location+(i+1)}>{pair[name]}</li>
+      return <li key={"location"+(i+1)}>{pair.name}</li>
       
       }
       )}
